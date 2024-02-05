@@ -1,6 +1,6 @@
 import axios from 'axios';
-
-const ACCESS_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
+const ACCESS_KEY = '5dJUmTNzk_DInymfzT_jBHsFHj5dP4N_HONquQWkj30';
+// const ACCESS_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
 const BASE_URL = 'https://api.unsplash.com/search/photos/';
 
 export const fetchImages = async (query, page) => {
