@@ -19,7 +19,7 @@ import { SkeletonImg } from './SkeletonImg/SkeletonImg';
 export const App = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [page, setPage] = useState(1);
-  const [pageCounter, setPageCounter] = useState(40);
+  const [pageCounter, setPageCounter] = useState(28);
   const [totalPages, setTotalPages] = useState(0);
   const [queryImages, setQueryImages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -53,7 +53,7 @@ export const App = () => {
     }
 
     setSearchQuery(`${Date.now()}/${newQuery}`);
-    setPageCounter(40);
+    setPageCounter(28);
     setPage(1);
     setQueryImages([]);
 
@@ -62,7 +62,7 @@ export const App = () => {
 
   const handleLoadMore = () => {
     setPage(page + 1);
-    setPageCounter(pageCounter + 40);
+    setPageCounter(pageCounter + 28);
   };
 
   useEffect(() => {
@@ -99,7 +99,7 @@ export const App = () => {
         {queryImages.length > 0 && <ImageGallery items={queryImages} openModal={openModal} />}
 
         {error && <ErrorMesage />}
-        {isLoading && <SkeletonImg cards={40} />}
+        {isLoading && <SkeletonImg cards={28} />}
         {queryImages.length > 0 && pageCounter <= totalPages && totalPages >= 40 && (
           <LoadMoreBtn onLoadMore={handleLoadMore} />
         )}

@@ -11,7 +11,7 @@ export const fetchImages = async (query, page) => {
     params: {
       query: query,
       page: page,
-      per_page: 40,
+      per_page: 28,
       order_by: 'latest',
       orientation: 'landscape',
     },
